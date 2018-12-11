@@ -1,0 +1,31 @@
+﻿@model JobSchedule.Entities.Models.MemberJob
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>MemberJob</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Job)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Job.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Member)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Member.Name)
+        </dd>
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    <a asp-action="Index">Back to List</a>
+</div>

@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="BaseService\Service.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\JobSchedule.Context\JobSchedule.Context.csproj" />
+    <ProjectReference Include="..\JobSchedule.Entities\JobSchedule.Entities.csproj" />
+  </ItemGroup>
+
+</Project>

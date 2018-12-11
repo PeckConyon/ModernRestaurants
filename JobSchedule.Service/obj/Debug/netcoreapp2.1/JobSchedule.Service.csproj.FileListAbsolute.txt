@@ -1,0 +1,14 @@
+C:\Users\Supun\source\repos\JobSchedule\JobSchedule.Service\bin\Debug\netcoreapp2.1\JobSchedule.Service.deps.json
+C:\Users\Supun\source\repos\JobSchedule\JobSchedule.Service\bin\Debug\netcoreapp2.1\JobSchedule.Service.dll
+C:\Users\Supun\source\repos\JobSchedule\JobSchedule.Service\bin\Debug\netcoreapp2.1\JobSchedule.Service.pdb
+C:\Users\Supun\source\repos\JobSchedule\JobSchedule.Service\bin\Debug\netcoreapp2.1\JobSchedule.Context.dll
+C:\Users\Supun\source\repos\JobSchedule\JobSchedule.Service\bin\Debug\netcoreapp2.1\JobSchedule.Entities.dll
+C:\Users\Supun\source\repos\JobSchedule\JobSchedule.Service\bin\Debug\netcoreapp2.1\JobSchedule.Context.pdb
+C:\Users\Supun\source\repos\JobSchedule\JobSchedule.Service\bin\Debug\netcoreapp2.1\JobSchedule.Entities.pdb
+C:\Users\Supun\source\repos\JobSchedule\JobSchedule.Service\obj\Debug\netcoreapp2.1\JobSchedule.Service.csprojAssemblyReference.cache
+C:\Users\Supun\source\repos\JobSchedule\JobSchedule.Service\obj\Debug\netcoreapp2.1\JobSchedule.Service.csproj.CoreCompileInputs.cache
+C:\Users\Supun\source\repos\JobSchedule\JobSchedule.Service\obj\Debug\netcoreapp2.1\JobSchedule.Service.AssemblyInfoInputs.cache
+C:\Users\Supun\source\repos\JobSchedule\JobSchedule.Service\obj\Debug\netcoreapp2.1\JobSchedule.Service.AssemblyInfo.cs
+C:\Users\Supun\source\repos\JobSchedule\JobSchedule.Service\obj\Debug\netcoreapp2.1\JobSchedule.Service.csproj.CopyComplete
+C:\Users\Supun\source\repos\JobSchedule\JobSchedule.Service\obj\Debug\netcoreapp2.1\JobSchedule.Service.dll
+C:\Users\Supun\source\repos\JobSchedule\JobSchedule.Service\obj\Debug\netcoreapp2.1\JobSchedule.Service.pdb

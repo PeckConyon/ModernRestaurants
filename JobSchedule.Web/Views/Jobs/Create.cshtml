@@ -1,0 +1,107 @@
+﻿@model JobSchedule.Entities.Models.Job
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+
+        $('#drpTemplate').prepend("<option value='' selected='selected'>-- Select Template --</option>");
+        $('#CategoryId').prepend("<option value='' selected='selected'>-- Select Category --</option>");
+
+        $('#drpTemplate').change(function () {
+
+            if ($(this).val() != "") {
+
+                var jobTemplateId = $(this).val();
+
+                $.ajax({
+                    url: '../JobTemplates/GetTemplate',
+                    type: 'GET',
+                    contentType: "application/json",
+                    data: {
+                        'jobTemplateId': jobTemplateId
+                    },
+                    success: function (data) {
+
+                        $('#Name').val(data.name);
+                        //$('#DateAssigned').val(data.dateAssigned.toString().split('T')[0]);
+                        //$('#DateCompleted').val(data.dateCompleted.toString().split('T')[0]);
+                        $('#Points').val(data.points);
+                        $('#CategoryId').val(data.categoryId);
+
+                    },
+                    error: function (request, error) {
+                        alert("Error : " + JSON.stringify(request));
+                    }
+                });
+            } else {
+
+                $('#Name').val("");
+                //$('#DateAssigned').val("");
+                //$('#DateCompleted').val("");
+                $('#Points').val("");
+                $('#CategoryId').val("");
+            }
+        })
+    });
+
+
+
+</script>
+
+<h2>Create</h2>
+
+<h4>Job</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group">
+                <label class="control-label">Job Template</label>
+                <select  class="form-control" id="drpTemplate" asp-items="ViewBag.JobTemplateId"></select>
+            </div>
+            <hr/>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DateAssigned" class="control-label"></label>
+                <input asp-for="DateAssigned" class="form-control" />
+                <span asp-validation-for="DateAssigned" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DateCompleted" class="control-label"></label>
+                <input asp-for="DateCompleted" class="form-control" />
+                <span asp-validation-for="DateCompleted" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Points" class="control-label"></label>
+                <input asp-for="Points" class="form-control" />
+                <span asp-validation-for="Points" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Category</label>
+                <select asp-for="CategoryId" class="form-control" asp-items="ViewBag.CategoryId"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
